@@ -7,7 +7,7 @@ html, body, .page {
   -webkit-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
   -moz-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
   -o-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
-  color: #fff;
+  color: #000000;
   overflow: hidden;
 }
 
@@ -51,6 +51,7 @@ html, body, .page {
 #t4:target #p1,
 #t5:target #p1{
   background: #0C2340;
+  /* #0C2340 */
 }
 
 #t2:target #p1 .icon,
@@ -79,6 +80,7 @@ ul .icon:hover {
 #t4:target ul .icon,
 #t5:target ul .icon{
   transform: scale(.6);
+  opacity: 0.2;
   -webkit-transform: scale(.6);
   -moz-transform: scale(.6);
   -o-transform: scale(.6);
@@ -90,13 +92,14 @@ ul .icon:hover {
 #t4:target #cuatro,
 #t5:target #cinco {
   transform: scale(1.2) !important;
+  opacity: 1.0;
   -webkit-transform: scale(1.2) !important;
   -moz-transform: scale(1.2) !important;
   -o-transform: scale(1.2) !important;
 }
 
 ul {
-  position: fixed;
+  position: absolute;
   z-index: 1;
   bottom: 0;
   left: 0;
@@ -108,6 +111,9 @@ ul {
   display: inline-block;
  }
 
+h1 {
+  left: 100px;
+}
 
 #menu .icon {
   margin: 15px;
@@ -192,4 +198,42 @@ a {
   -moz-transform: translateX(0) !important;
   -o-transform: translateX(0) !important;
   transition-delay: .5s;
+}
+
+/* CSS Grid Layout */
+
+.layout{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 10% 90%;
+  grid-template-rows: 10% 90%;
+}
+
+/* div.image {
+   background-image: url('/static/media/portrait.png');
+   background-size: auto;
+   background-repeat:   no-repeat;
+   background-position: center center;
+}​ */
+
+/* Typewritter Effect */
+.welcome {
+  width: 630px;
+  /* position: absolute;
+  top: calc(50% - 90px);
+  left: calc(50% - 300px);
+  text-align: center; */
+  font-size: 80px;
+  color: white;
+}
+.sub{
+  /* position: absolute;
+  top: calc(50% - 90px);
+  left: calc(50% - 300px);
+  text-align: center; */
+  font-size: 50px;
+  color: white;
+  opacity: .6
+
+
 }

@@ -20,5 +20,5 @@ from basic_app.views import test
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('',include('basic_app.urls')),
-    path('', test, name= 'test')
+    path('', test, name= 'home')
 ]

@@ -7,12 +7,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css">
     <script src="https://kit.fontawesome.com/5d66260a49.js" crossorigin="anonymous"></script>
-    <!-- <meta name="designer" content="Alberto Hartzet">
-<meta name="programer" content="Alberto Hartzet">
-<meta name="author" content="Alberto Hartzet">
-<meta name="description" content="One page navigation with pure CSS">
-<meta property="og:url" content="https://codepen.io/hrtzt/details/NPZKRN">
-<meta property="og:image" content="https://pbs.twimg.com/media/CCNJN_XUMAAJSzU.jpg:large"> -->
 
     <title></title>
   </head>
@@ -23,38 +17,43 @@
           <div class="ct" id="t4">
              <div class="ct" id="t5">
               <ul id="menu">
-                <a href="#t1"><li class="icon fas fa-home fa-3x" id="uno"></li></a><br>
+                <a href="{% url 'home' %}"><li class="icon fas fa-home fa-3x" id="uno"></li></a><br>
                 <a href="#t2"><li class="icon fas fa-id-badge fa-3x" id="dos"></li></a><br>
                 <a href="#t3"><li class="icon fas fa-briefcase fa-3x" id="tres"></li></a><br>
                 <a href="#t4"><li class="icon fas fa-at fa-3x" id="cuatro"></li></a><br>
-                <li class="icon fas fa-blog fa-3x" id="cinco"></li></a><br>
+                <a href="#t5"><li class="icon fas fa-blog fa-3x" id="cinco"></li></a><br>
               </ul>
               <div class="page" id="p1">
-                 <section class="icon fas fa-bolt"><span class="title">Bolt</span><span class="hint">Like this pen to see the magic!...<br> Just kidding, it won't happen anything but I'll be really happy If you do so.</span></section>
+                 <!-- <section class="icon fas fa-bolt"> <span class="title">Bolt</span><span class="hint">Like this pen to see the magic!...<br> Just kidding, it won't happen anything but I'll be really happy If you do so.</span></section> -->
+                 {% include 'basic_app/home_page.html' %}
               </div>
               <div class="page" id="p2">
-                <section class="icon fas fa-keyboard-o"><span class="title">Type</span></section>
+                <!-- <section class="icon fas fa-keyboard-o"><span class="title">Type</span></section> -->
+                {% include 'basic_app/about_me.html' %}
               </div>
               <div class="page" id="p3">
-                <section class="icon fas fa-rocket"><span class="title">Rocket</span></section>
+                <!-- <section class="icon fas fa-rocket"><span class="title">Rocket</span></section> -->
+                {% include 'basic_app/my_work.html' %}
               </div>
               <div class="page" id="p4">
-                <section class="icon fa fa-dribbble">
+                <!-- <section class="icon fa fa-dribbble">
                   <span class="title">Dribbble</span>
                   <p class="hint">
                     <a href="https://dribbble.com/albertohartzet" target="_blank">Im ready to play, <span class="hint line-trough">invite me </span> find me</a>
                   </p>
                   <p class="hint">Already invited by <a href="http://www.dribbble.com/mrpeters" target="_blank">Stan Peters</a></p>
-                </section>
+                </section> -->
+                {% include 'basic_app/contact_me.html' %}
               </div>
               <div class="page" id="p5">
-                <section class="icon fa fa-plus-circle">
+                <!-- <section class="icon fa fa-plus-circle">
                   <span class="title">More</span>
                   <p class="hint">
                     <span>You love one page & CSS only stuff? </span><br/>
                     <a href="https://codepen.io/hrtzt/details/pgXMYb/" target="_blank">check this pen "Pure CSS One page vertical navigation"</a>
                   </p>
-                </section>
+                </section> -->
+                {% include 'basic_app/blog.html' %}
               </div>
             </div>
           </div>
@@ -65,4 +64,6 @@
 
 
   </body>
+
+  <script type="text/javascript" src= "{% static "js/typewritter.js" %}"> </script>
 </html>
